@@ -1,0 +1,16 @@
+# Creative Tabs
+itemGroup.miraculous=Miraculous
+
+#Entities
+entity.wither_demon.name=Wither Demon
+entity.mangle_demon.name=Mangle Demon
+entity.ignite_demon.name=Ignite Demon
+entity.glare_demon.name=Glare Demon
+
+#Items
+item.salt.name=Salt
+item.salt_shot_shell.name=Salt Shot Shell
+item.shotgun.name=Shotgun
+
+#Blocks
+tile.salt_ore.name=Salt Ore
