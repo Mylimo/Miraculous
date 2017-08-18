@@ -1,17 +1,17 @@
 {
-  "parent": "miraculous:recipes/root",
+  "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
       "miraculous:flask"
     ]
   },
   "criteria": {
-    "has_iron_ingot": {
+    "has_leather": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_ingot"
+            "item": "minecraft:leather"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_iron_ingot",
+      "has_leather",
       "has_the_recipe"
     ]
   ]

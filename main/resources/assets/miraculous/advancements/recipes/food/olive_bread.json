@@ -1,17 +1,17 @@
 {
-  "parent": "miraculous:recipes/root",
+  "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
       "miraculous:olive_bread"
     ]
   },
   "criteria": {
-    "has_olive": {
+    "has_wheat": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "miraculous:olive"
+            "item": "minecraft:wheat"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_olive",
+      "has_wheat",
       "has_the_recipe"
     ]
   ]

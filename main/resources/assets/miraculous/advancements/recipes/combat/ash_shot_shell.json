@@ -1,16 +1,17 @@
 {
-  "parent": "miraculous:recipes/root",
+  "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
       "miraculous:ash_shot_shell"
     ]
   },
-    "has_shotgun": {
+  "criteria": {
+    "has_gunpowder": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "miraculous:shotgun"
+            "item": "minecraft:gunpowder"
           }
         ]
       }
@@ -24,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_shotgun",
+      "has_gunpowder",
       "has_the_recipe"
     ]
   ]

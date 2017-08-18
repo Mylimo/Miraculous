@@ -1,31 +1,11 @@
 {
-  "parent": "miraculous:recipes/root",
+  "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
       "miraculous:salt_shot_shell"
     ]
   },
   "criteria": {
-    "has_gold_nugget": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gold_nugget"
-          }
-        ]
-      }
-    },
-    "has_salt": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "miraculous:salt"
-          }
-        ]
-      }
-    },
     "has_gunpowder": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -45,8 +25,6 @@
   },
   "requirements": [
     [
-      "has_gold_nugget",
-      "has_salt",
       "has_gunpowder",
       "has_the_recipe"
     ]

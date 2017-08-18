@@ -1,5 +1,5 @@
 {
-  "parent": "miraculous:recipes/root",
+  "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
       "miraculous:rosary"
@@ -16,7 +16,6 @@
         ]
       }
     },
-
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
