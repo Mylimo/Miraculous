@@ -9,9 +9,24 @@ public class ModelItem
 {
     public static void register()
     {
+        registerItem(ModItems.SHOTGUN);
+        registerItem(ModItems.SHOTDUMMY);
+        registerItem(ModItems.IRON_SHOT_SHELL);
+        registerItem(ModItems.BLAZE_SHOT_SHELL);
         registerItem(ModItems.SALT);
         registerItem(ModItems.SALT_SHOT_SHELL);
-        registerItem(ModItems.SHOTGUN);
+        registerItem(ModItems.ASH);
+        registerItem(ModItems.ASH_SHOT_SHELL);
+        registerItem(ModItems.OLIVE);
+        registerItem(ModItems.OLIVE_WOOD_STICK);
+        registerItem(ModItems.OLIVE_BREAD);
+        registerItem(ModItems.FLASK);
+        registerItem(ModItems.HOLY_OIL_FLASK);
+        registerItem(ModItems.HOLY_WATER_FLASK);
+        registerItem(ModItems.SALTY_CRACKER);
+        registerItem(ModItems.OLIVE_CRACKER);
+        registerItem(ModItems.ROSARY);
+        registerItem(ModItems.ROSARY_FILLED);
     }
 
     private static void registerItem(Item item)

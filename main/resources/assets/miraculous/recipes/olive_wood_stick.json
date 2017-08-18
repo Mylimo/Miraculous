@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P",
+    "P"
+  ],
+  "key": {
+    "P": {
+      "item": "miraculous:olive_planks",
+      "data": 0
+      }
+    },
+
+  "result": {
+    "item": "miraculous:olive_wood_stick",
+    "count": 4
+  }
+}

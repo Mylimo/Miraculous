@@ -1,6 +1,6 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"miraculous:items/salt_shell"
+        "layer0":"miraculous:items/salt_shot_shell"
     }
 }

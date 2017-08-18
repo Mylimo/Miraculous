@@ -1,12 +1,14 @@
 package com.mylimo.miraculous.item;
 
-import com.mylimo.miraculous.reference.Reference;
+import com.mylimo.miraculous.Reference;
+import net.minecraft.item.Item;
 
-public class ItemSalt extends ItemMiraculous
+
+public class ItemSalt extends Item
 {
     public ItemSalt()
     {
-        super(Reference.SALT);
+        ItemMiraculous.registerItem(Reference.SALT, this);
 
         this.setMaxStackSize(64);
     }

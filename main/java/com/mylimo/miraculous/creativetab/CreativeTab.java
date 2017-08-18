@@ -1,7 +1,7 @@
 package com.mylimo.miraculous.creativetab;
 
 import com.mylimo.miraculous.init.ModItems;
-import com.mylimo.miraculous.reference.Reference;
+import com.mylimo.miraculous.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
@@ -12,7 +12,7 @@ public class CreativeTab
         @Override
         public ItemStack getTabIconItem()
         {
-            return new ItemStack(ModItems.SALT);
+            return new ItemStack(ModItems.SHOTGUN);
         }
     };
 }

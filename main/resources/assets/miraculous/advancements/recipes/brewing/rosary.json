@@ -1,0 +1,33 @@
+{
+  "parent": "miraculous:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:rosary"
+    ]
+  },
+  "criteria": {
+    "has_olive_wood_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:olive_wood_stick"
+          }
+        ]
+      }
+    },
+
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:rosary"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_olive_wood_stick",
+      "has_the_recipe"
+    ]
+  ]
+}

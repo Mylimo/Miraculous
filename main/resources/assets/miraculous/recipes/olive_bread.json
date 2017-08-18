@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "OOO",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat",
+      "data": 0
+    },
+    "O": {
+      "item": "miraculous:olive",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "miraculous:olive_bread"
+  }
+}

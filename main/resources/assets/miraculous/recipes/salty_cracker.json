@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "WSW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat",
+      "data": 0
+    },
+    "S": {
+      "item": "miraculous:salt",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "miraculous:salty_cracker",
+    "count": 8
+  }
+}

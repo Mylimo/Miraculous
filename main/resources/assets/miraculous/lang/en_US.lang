@@ -6,11 +6,50 @@ entity.wither_demon.name=Wither Demon
 entity.mangle_demon.name=Mangle Demon
 entity.ignite_demon.name=Ignite Demon
 entity.glare_demon.name=Glare Demon
+entity.shot.name=Shot Projectile
 
 #Items
 item.salt.name=Salt
 item.salt_shot_shell.name=Salt Shot Shell
 item.shotgun.name=Shotgun
+item.shot_dummy.name=Shot Dummy
+item.iron_shot_shell.name=Iron Shot Shell
+item.ash.name=Ash
+item.ash_shot_shell.name=Ash Shot Shell
+item.blaze_shot_shell.name=Blaze Shot Shell
+item.olive.name=Olive
+item.olive_wood_stick.name=Olive Wood Stick
+item.olive_bread.name=Olive Bread
+item.flask.name=Flask
+item.holy_oil_flask.name=Holy Oil Flask
+item.holy_water_flask.name=Holy Water Flask
+item.salty_cracker.name=Salty Cracker
+item.olive_cracker.name=Olive Cracker
+item.rosary.name=Rosary
+item.rosary_filled.name=Filled Rosary
+
 
 #Blocks
 tile.salt_ore.name=Salt Ore
+tile.salt_block.name=Block of Salt
+tile.ash_block.name=Block of Ash
+tile.olive_log.name=Olive Log
+tile.olive_leaves.name=Olive Leaves
+tile.olive_sapling.name=Olive Sapling
+tile.olive_planks.name=Olive Wood Planks
+
+#PotionEffects
+potion.effect.holy_oil=Holy Oil
+potion.effect.holy_water=Holy Water
+effect.holy_oil=Holy Oil
+effect.holy_water=Holy Water
+
+#Advancements
+advancements.basics.root.title=A Miraculous Tree
+advancements.basics.root.description=Cut down an Olive Tree
+advancements.basics.mine_salt.title=Don't be so Salty!
+advancements.basics.mine_salt.description=Mine some Salt Ore
+advancements.basics.shotgun.title=Guns!
+advancements.basics.shotgun.description=Craft a Shotgun
+advancements.basics.rosary.title=Are we in a church or what?
+advancements.basics.rosary.description=Craft and fill a Rosary

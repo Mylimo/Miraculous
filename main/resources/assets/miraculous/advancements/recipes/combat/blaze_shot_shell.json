@@ -1,0 +1,54 @@
+{
+  "parent": "miraculous:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:blaze_shot_shell"
+    ]
+  },
+  "criteria": {
+    "has_gold_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gold_nugget"
+          }
+        ]
+      }
+    },
+    "has_blaze_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:blaze_powder"
+          }
+        ]
+      }
+    },
+    "has_gunpowder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gunpowder"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:blaze_shot_shell"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gold_nugget",
+      "has_blaze_powder",
+      "has_gunpowder",
+      "has_the_recipe"
+    ]
+  ]
+}

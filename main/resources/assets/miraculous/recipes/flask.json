@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "L L",
+    " I "
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:leather",
+      "data": 0
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+      }
+    },
+
+  "result": {
+    "item": "miraculous:flask",
+    "count": 1
+  }
+}

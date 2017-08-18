@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "miraculous:rosary_filled"
+        },
+        "title": {
+            "translate": "advancements.basics.rosary.title"
+        },
+        "description": {
+            "translate": "advancements.basics.rosary.description"
+        }
+    },
+    "parent": "miraculous:basics/root",
+    "criteria": {
+        "get_stone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "miraculous:rosary_filled"
+                    }
+                ]
+            }
+        }
+    }
+}

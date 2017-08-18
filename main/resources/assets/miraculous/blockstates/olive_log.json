@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "miraculous:olive_log" },
+        "axis=z":     { "model": "miraculous:olive_log", "x": 90 },
+        "axis=x":     { "model": "miraculous:olive_log", "x": 90, "y": 90 },
+        "axis=none":   { "model": "miraculous:olive_bark" }
+    }
+}

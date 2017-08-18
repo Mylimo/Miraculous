@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "miraculous:salt"
+        },
+        "title": {
+            "translate": "advancements.basics.mine_salt.title"
+        },
+        "description": {
+            "translate": "advancements.basics.mine_salt.description"
+        }
+    },
+    "parent": "miraculous:basics/root",
+    "criteria": {
+        "get_stone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "miraculous:salt"
+                    }
+                ]
+            }
+        }
+    }
+}

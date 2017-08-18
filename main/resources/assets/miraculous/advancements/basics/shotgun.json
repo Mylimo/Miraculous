@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "miraculous:shotgun"
+        },
+        "title": {
+            "translate": "advancements.basics.shotgun.title"
+        },
+        "description": {
+            "translate": "advancements.basics.shotgun.description"
+        }
+    },
+    "parent": "miraculous:basics/root",
+    "criteria": {
+        "get_stone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "miraculous:shotgun"
+                    }
+                ]
+            }
+        }
+    }
+}

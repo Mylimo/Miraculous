@@ -1,0 +1,6 @@
+{
+    "parent":"item/generated",
+    "textures": {
+        "layer0":"miraculous:items/holy_water_flask"
+    }
+}

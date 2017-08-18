@@ -1,0 +1,33 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "IG ",
+    "LI ",
+    " SP"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetGold"
+    },
+    "L": {
+      "item": "minecraft:lever",
+      "data": 0
+    },
+    "S": {
+      "item": "miraculous:olive_wood_stick",
+      "data": 0
+    },
+    "P": {
+      "item": "miraculous:olive_planks",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "miraculous:shotgun"
+  }
+}

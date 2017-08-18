@@ -1,0 +1,32 @@
+{
+  "parent": "miraculous:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:salty_cracker"
+    ]
+  },
+  "criteria": {
+    "has_salt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:salt"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:salty_cracker"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_salt",
+      "has_the_recipe"
+    ]
+  ]
+}

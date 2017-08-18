@@ -1,0 +1,26 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "G  ",
+    " I ",
+    "  P"
+  ],
+  "key": {
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetGold"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetIron"
+    },
+    "P": {
+      "type": "forge:ore_dict",
+      "ore": "gunpowder"
+    }
+  },
+  "result": {
+    "item": "miraculous:iron_shot_shell",
+    "count": 2
+  }
+}

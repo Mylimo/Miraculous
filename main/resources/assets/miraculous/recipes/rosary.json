@@ -1,0 +1,27 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "RSR",
+    "SWS",
+    "RWR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:dye",
+      "data": 1
+    },
+    "S": {
+      "item": "minecraft:string",
+      "data": 0
+    },
+    "W": {
+      "item": "miraculous:olive_wood_stick",
+      "data": 0
+    }
+    },
+
+  "result": {
+    "item": "miraculous:rosary",
+    "count": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "miraculous:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:olive_cracker"
+    ]
+  },
+  "criteria": {
+    "has_olive": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:olive"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:olive_cracker"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_olive",
+      "has_the_recipe"
+    ]
+  ]
+}

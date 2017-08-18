@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "miraculous:ash",
+      "data": 0
+      }
+  },
+  "result": {
+    "item": "miraculous:ash_block"
+  }
+}

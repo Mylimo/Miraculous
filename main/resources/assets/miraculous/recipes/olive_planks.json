@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "L"
+  ],
+  "key": {
+    "L": {
+      "item": "miraculous:olive_log",
+      "data": 0
+      }
+    },
+
+  "result": {
+    "item": "miraculous:olive_planks",
+    "count": 4
+  }
+}

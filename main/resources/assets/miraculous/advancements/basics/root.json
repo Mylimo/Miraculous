@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "miraculous:olive_log"
+    },
+    "title": {
+      "translate": "advancements.basics.root.title"
+    },
+    "description": {
+      "translate": "advancements.basics.root.description"
+    },
+    "background": "miraculous:textures/blocks/planks_olive.png",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafting_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:olive_log"
+          }
+        ]
+      }
+    }
+  }
+}

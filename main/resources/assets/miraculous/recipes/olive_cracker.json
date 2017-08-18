@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " O ",
+    "WSW"
+  ],
+  "key": {
+    "O": {
+      "item": "miraculous:olive",
+      "data": 0
+    },
+    "W": {
+      "item": "minecraft:wheat",
+      "data": 0
+    },
+    "S": {
+      "item": "miraculous:salt",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "miraculous:olive_cracker",
+    "count": 8
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "parent": "miraculous:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:ash_shot_shell"
+    ]
+  },
+    "has_shotgun": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:shotgun"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:ash_shot_shell"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_shotgun",
+      "has_the_recipe"
+    ]
+  ]
+}

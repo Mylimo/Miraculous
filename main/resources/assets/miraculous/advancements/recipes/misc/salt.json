@@ -1,0 +1,32 @@
+{
+  "parent": "miraculous:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:salt"
+    ]
+  },
+  "criteria": {
+    "has_salt_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:salt_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:salt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_salt_block",
+      "has_the_recipe"
+    ]
+  ]
+}

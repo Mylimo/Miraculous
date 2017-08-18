@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "miraculous:salt",
+      "data": 0
+      }
+  },
+  "result": {
+    "item": "miraculous:salt_block"
+  }
+}
