@@ -51,7 +51,7 @@ public class BlockOliveLeaves extends BlockLeaves
     @Override
     protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance)
     {
-        if (worldIn.rand.nextInt(chance) <= 7)
+        if (worldIn.rand.nextInt(chance) <= 9)
         {
             spawnAsEntity(worldIn, pos, new ItemStack(ModItems.OLIVE));
         }
@@ -60,7 +60,7 @@ public class BlockOliveLeaves extends BlockLeaves
     @Override
     protected int getSaplingDropChance(IBlockState state)
     {
-        return 60;
+        return 80;
     }
 
     @Nonnull
