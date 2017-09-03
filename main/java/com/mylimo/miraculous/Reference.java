@@ -5,7 +5,7 @@ public class Reference
     //General
     public static final String MOD_ID = "miraculous";
     public static final String MOD_NAME = "Miraculous";
-    public static final String MOD_VERSION = "1.10.2-0.1";
+    public static final String MOD_VERSION = "1.12.1-0.1";
 
     public static final String CLIENT_PROXY = "com.mylimo.miraculous.proxy.ClientProxy";
     public static final String SERVER_PROXY = "com.mylimo.miraculous.proxy.ServerProxy";
