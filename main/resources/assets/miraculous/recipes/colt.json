@@ -1,0 +1,33 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "NG ",
+    " I ",
+    " LS"
+  ],
+  "key": {
+    "N": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetIron"
+    },
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetGold"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "L": {
+      "item": "minecraft:lever",
+      "data": 0
+    },
+    "S": {
+      "item": "miraculous:olive_wood_stick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "miraculous:colt"
+  }
+}

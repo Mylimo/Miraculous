@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "miraculous:colt"
+        },
+        "title": {
+            "translate": "advancements.basics.colt.title"
+        },
+        "description": {
+            "translate": "advancements.basics.colt.description"
+        }
+    },
+    "parent": "miraculous:basics/shotgun",
+    "criteria": {
+        "get_stone": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "miraculous:colt"
+                    }
+                ]
+            }
+        }
+    }
+}

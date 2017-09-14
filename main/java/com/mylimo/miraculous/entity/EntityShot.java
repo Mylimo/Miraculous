@@ -15,6 +15,8 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
+
 public class EntityShot extends EntityThrowable
 {
     private static final DataParameter<String> SHOTTYPE = EntityDataManager.<String>createKey(EntityShot.class, DataSerializers.STRING);
@@ -26,6 +28,7 @@ public class EntityShot extends EntityThrowable
         super(world);
         this.ticksInWorld = 0;
     }
+
 
     public EntityShot(World world, EntityLivingBase shooter)
     {
@@ -75,7 +78,7 @@ public class EntityShot extends EntityThrowable
                 }
                 else if (result.entityHit instanceof EntityLivingBase)
                 {
-                    i = 2;
+                    i = 1;
                 }
             }
             else if (this.getDataManager().get(SHOTTYPE).equals("Iron"))
@@ -86,10 +89,10 @@ public class EntityShot extends EntityThrowable
                 }
                 else if (result.entityHit instanceof EntityLivingBase)
                 {
-                    i = 8;
+                    i = 2;
                 }
             }
-            else if (this.getDataManager().get(SHOTTYPE).equals("Cremains"))
+            else if (this.getDataManager().get(SHOTTYPE).equals("Ash"))
             {
                 if (result.entityHit.equals(shooter))
                 {
@@ -104,15 +107,18 @@ public class EntityShot extends EntityThrowable
                 }
                 else if (result.entityHit instanceof EntityLivingBase)
                 {
-                    i = 4;
+                    i = 1;
                     result.entityHit.setFire(4);
                 }
             }
 
-            result.entityHit.attackEntityFrom(DamageSource.causeIndirectDamage(this, this.getThrower()), (float)i - ticksInWorld + 1);
+            if (!result.entityHit.equals(shooter) && !result.entityHit.equals(this))
+            {
+                result.entityHit.attackEntityFrom(DamageSource.causeIndirectDamage(this, this.getThrower()), (float) i);
+            }
         }
 
-        if (!this.world.isRemote && !(result.entityHit == shooter))
+        if (!this.world.isRemote && !result.entityHit.equals(shooter))
         {
             if (this.getDataManager().get(SHOTTYPE).equals("Blaze"))
             {
@@ -120,7 +126,7 @@ public class EntityShot extends EntityThrowable
             }
             else
             {
-                this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+                this.world.spawnParticle(EnumParticleTypes.REDSTONE, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
             }
             this.ticksInWorld = 0;
             this.setDead();

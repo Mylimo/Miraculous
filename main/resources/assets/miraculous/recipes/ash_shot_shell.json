@@ -1,16 +1,16 @@
 {
   "type": "forge:ore_shaped",
   "pattern": [
-    "G  ",
-    " C ",
-    "  P"
+    "A  ",
+    " P ",
+    "  G"
   ],
   "key": {
     "G": {
       "type": "forge:ore_dict",
       "ore": "nuggetGold"
     },
-    "C": {
+    "A": {
       "item": "miraculous:ash",
       "data": 0
     },

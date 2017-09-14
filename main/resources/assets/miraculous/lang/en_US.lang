@@ -27,6 +27,8 @@ item.salty_cracker.name=Salty Cracker
 item.olive_cracker.name=Olive Cracker
 item.rosary.name=Rosary
 item.rosary_filled.name=Filled Rosary
+item.colt.name=Colt
+item.iron_bullet.name=Iron Bullet
 
 
 #Blocks
@@ -49,7 +51,9 @@ advancements.basics.root.title=A Miraculous Tree
 advancements.basics.root.description=Cut down an Olive Tree
 advancements.basics.mine_salt.title=Don't be so Salty!
 advancements.basics.mine_salt.description=Mine some Salt Ore
-advancements.basics.shotgun.title=Guns!
+advancements.basics.shotgun.title=Shotgun!
 advancements.basics.shotgun.description=Craft a Shotgun
 advancements.basics.rosary.title=Are we in a church or what?
 advancements.basics.rosary.description=Craft and fill a Rosary
+advancements.basics.colt.title=Yet another gun
+advancements.basics.colt.description=Craft a Colt

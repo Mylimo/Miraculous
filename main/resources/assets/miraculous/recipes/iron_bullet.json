@@ -1,9 +1,9 @@
 {
   "type": "forge:ore_shaped",
   "pattern": [
-    "I  ",
-    " P ",
-    "  G"
+    "G  ",
+    " I ",
+    "  P"
   ],
   "key": {
     "G": {
@@ -20,7 +20,7 @@
     }
   },
   "result": {
-    "item": "miraculous:iron_shot_shell",
-    "count": 2
+    "item": "miraculous:iron_bullet",
+    "count": 4
   }
 }

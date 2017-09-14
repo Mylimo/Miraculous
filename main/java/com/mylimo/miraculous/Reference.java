@@ -12,6 +12,7 @@ public class Reference
 
     //EntityNames
     public static final String SHOT_PROJECTILE = "shot_projectile";
+    public static final String BULLET_PROJECTILE = "bullet_projectile";
 
     //ItemNames
     public static final String SALT = "salt";
@@ -32,6 +33,9 @@ public class Reference
     public static final String OLIVE_CRACKER = "olive_cracker";
     public static final String ROSARY = "rosary";
     public static final String ROSARY_FILLED = "rosary_filled";
+    public static final String COLT = "colt";
+    public static final String IRON_BULLET = "iron_bullet";
+
 
     //BlockNames
     public static final String SALT_ORE = "salt_ore";

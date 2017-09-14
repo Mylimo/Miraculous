@@ -27,6 +27,8 @@ public class ModelItem
         registerItem(ModItems.OLIVE_CRACKER);
         registerItem(ModItems.ROSARY);
         registerItem(ModItems.ROSARY_FILLED);
+        registerItem(ModItems.COLT);
+        registerItem(ModItems.IRON_BULLET);
     }
 
     private static void registerItem(Item item)
