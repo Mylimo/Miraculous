@@ -117,9 +117,9 @@ public class ItemShotgun extends Item
             {
                 itemStack.damageItem(1, player);
                 EntityShot entityShot = new EntityShot(world, player);
+                entityShot.readFromNBT(itemStack.getTagCompound());
                 entityShot.setHeadingFromThrower(player, player.rotationPitch, player.rotationYaw, 0.0F, 2.5F, 8.0F);
                 world.spawnEntity(entityShot);
-                entityShot.readFromNBT(itemStack.getTagCompound());
             }
         }
     }

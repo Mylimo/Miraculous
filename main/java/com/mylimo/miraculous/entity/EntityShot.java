@@ -54,18 +54,18 @@ public class EntityShot extends EntityThrowable
 
         if (this.getDataManager().get(SHOTTYPE).equals("Blaze"))
         {
-            this.world.spawnParticle(EnumParticleTypes.FLAME, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+            this.world.spawnParticle(EnumParticleTypes.FLAME, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
         }
         else
         {
-            this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+            this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
         }
 
         ++this.ticksInWorld;
     }
 
 
-    protected void onImpact(RayTraceResult result)
+    protected void onImpact(@Nonnull RayTraceResult result)
     {
         if (result.entityHit != null)
         {
@@ -112,21 +112,21 @@ public class EntityShot extends EntityThrowable
                 }
             }
 
-            if (!result.entityHit.equals(shooter) && !result.entityHit.equals(this))
+            if (result.entityHit != shooter)
             {
                 result.entityHit.attackEntityFrom(DamageSource.causeIndirectDamage(this, this.getThrower()), (float) i);
             }
         }
 
-        if (!this.world.isRemote && !result.entityHit.equals(shooter))
+        if (!this.world.isRemote && result.entityHit != shooter)
         {
             if (this.getDataManager().get(SHOTTYPE).equals("Blaze"))
             {
-                this.world.spawnParticle(EnumParticleTypes.FLAME, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+                this.world.spawnParticle(EnumParticleTypes.FLAME, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
             }
             else
             {
-                this.world.spawnParticle(EnumParticleTypes.REDSTONE, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+                this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
             }
             this.ticksInWorld = 0;
             this.setDead();

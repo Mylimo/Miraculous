@@ -30,6 +30,7 @@ public class ItemBlazeShotShell extends Item
         return 0;
     }
 
+
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand)
     {
         ItemStack shell = player.getHeldItem(hand);

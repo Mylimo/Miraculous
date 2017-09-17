@@ -40,12 +40,12 @@ public class EntityBullet extends EntityThrowable
     {
         super.onUpdate();
 
-        if (this.ticksInWorld >= 12)
+        if (this.ticksInWorld >= 12000)
         {
             this.setDead();
         }
 
-        this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+        this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
 
         ++ticksInWorld;
     }
@@ -67,15 +67,15 @@ public class EntityBullet extends EntityThrowable
                 }
             }
 
-            if (!result.entityHit.equals(shooter) && !result.entityHit.equals(this))
+            if (result.entityHit != shooter)
             {
                 result.entityHit.attackEntityFrom(DamageSource.causeIndirectDamage(this, this.getThrower()), (float) i);
             }
         }
 
-        if (!this.world.isRemote && !result.entityHit.equals(shooter))
+        if (!this.world.isRemote && result.entityHit != shooter)
         {
-            this.world.spawnParticle(EnumParticleTypes.REDSTONE, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+            this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
             this.ticksInWorld = 0;
             this.setDead();
         }
