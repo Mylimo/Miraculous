@@ -40,7 +40,7 @@ public class EntityBullet extends EntityThrowable
     {
         super.onUpdate();
 
-        if (this.ticksInWorld >= 12000)
+        if (this.ticksInWorld >= 12)
         {
             this.setDead();
         }
@@ -63,7 +63,7 @@ public class EntityBullet extends EntityThrowable
                 }
                 else if (result.entityHit instanceof EntityLivingBase)
                 {
-                    i = 10;
+                    i = 20;
                 }
             }
 

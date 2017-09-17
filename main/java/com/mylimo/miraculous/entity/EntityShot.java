@@ -65,7 +65,7 @@ public class EntityShot extends EntityThrowable
     }
 
 
-    protected void onImpact(@Nonnull RayTraceResult result)
+    protected void onImpact(RayTraceResult result)
     {
         if (result.entityHit != null)
         {
@@ -89,6 +89,7 @@ public class EntityShot extends EntityThrowable
                 }
                 else if (result.entityHit instanceof EntityLivingBase)
                 {
+                    result.entityHit.hurtResistantTime = 0;
                     i = 2;
                 }
             }
