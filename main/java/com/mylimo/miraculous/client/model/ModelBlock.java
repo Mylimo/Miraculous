@@ -21,6 +21,7 @@ public class ModelBlock
         registerBlock(ModBlocks.OLIVE_LEAVES);
         registerBlock(ModBlocks.OLIVE_SAPLING);
         registerBlock(ModBlocks.OLIVE_PLANKS);
+        registerBlock(ModBlocks.MAGIC_BOWL);
 
         registerBlockWithStateMapper(ModBlocks.OLIVE_LEAVES, (new StateMap.Builder()).ignore(BlockLeaves.CHECK_DECAY, BlockLeaves.DECAYABLE).build());
         registerBlockWithStateMapper(ModBlocks.OLIVE_SAPLING, (new StateMap.Builder()).ignore(BlockOliveSapling.STAGE).build());

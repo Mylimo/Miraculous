@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "L L",
+    " L "
+  ],
+  "key": {
+    "L": {
+      "item": "miraculous:olive_log",
+      "data": 0
+      }
+  },
+  "result": {
+    "item": "miraculous:magic_bowl"
+  }
+}

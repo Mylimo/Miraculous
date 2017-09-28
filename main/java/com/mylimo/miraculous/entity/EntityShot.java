@@ -99,6 +99,10 @@ public class EntityShot extends EntityThrowable
                 {
                     i = 0;
                 }
+                else if (result.entityHit instanceof EntityLivingBase)
+                {
+                    i = 1;
+                }
             }
             else if (this.getDataManager().get(SHOTTYPE).equals("Blaze"))
             {

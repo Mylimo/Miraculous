@@ -73,6 +73,7 @@ public class EntityBullet extends EntityThrowable
             }
         }
 
+
         if (!this.world.isRemote && result.entityHit != shooter)
         {
             this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);

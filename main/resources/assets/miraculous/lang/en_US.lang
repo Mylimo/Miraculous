@@ -39,6 +39,7 @@ tile.olive_log.name=Olive Log
 tile.olive_leaves.name=Olive Leaves
 tile.olive_sapling.name=Olive Sapling
 tile.olive_planks.name=Olive Wood Planks
+tile.magic_bowl.name=Magic Bowl
 
 #PotionEffects
 potion.effect.holy_oil=Holy Oil

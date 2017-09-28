@@ -11,6 +11,7 @@ public class ModBlocks
     public static BlockOliveLeaves OLIVE_LEAVES;
     public static BlockOliveSapling OLIVE_SAPLING;
     public static BlockOlivePlanks OLIVE_PLANKS;
+    public static BlockMagicBowl MAGIC_BOWL;
 
     public static void init()
     {
@@ -21,5 +22,6 @@ public class ModBlocks
         OLIVE_LEAVES = new BlockOliveLeaves();
         OLIVE_SAPLING = new BlockOliveSapling();
         OLIVE_PLANKS = new BlockOlivePlanks();
+        MAGIC_BOWL = new BlockMagicBowl();
     }
 }

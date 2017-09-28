@@ -45,6 +45,7 @@ public class Reference
     public static final String OLIVE_LEAVES = "olive_leaves";
     public static final String OLIVE_SAPLING = "olive_sapling";
     public static final String OLIVE_PLANKS = "olive_planks";
+    public static final String MAGIC_BOWL = "magic_bowl";
 
     //PotionNames
     public static final String HOLY_WATER = "holy_water";
