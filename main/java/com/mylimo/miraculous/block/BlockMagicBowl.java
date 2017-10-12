@@ -5,7 +5,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -13,6 +18,7 @@ import net.minecraft.world.World;
 
 public class BlockMagicBowl extends Block
 {
+    public static final PropertyEnum<BlockMagicBowl.EnumIngredient> INGREDIENT = PropertyEnum.create("ingredient", BlockMagicBowl.EnumIngredient.class);
     public static final AxisAlignedBB AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.1875D, 0.8125D, 0.1875D, 0.8125D);
 
     public BlockMagicBowl()
@@ -59,5 +65,35 @@ public class BlockMagicBowl extends Block
     private boolean canBePlacedOn(World worldIn, BlockPos pos)
     {
         return worldIn.getBlockState(pos).isTopSolid() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
+    }
+
+    public boolean onBlockActivated(World world, BlockPos blockPos, IBlockState iBlockState, EntityPlayer player, EnumHand enumHand, EnumFacing enumFacing, float hitX, float hitY, float hitZ)
+    {
+        return true;
+    }
+
+    public static enum EnumIngredient implements IStringSerializable
+    {
+        EMPTY("empty"),
+        EXECUTOR("executer"),
+        POWER("power"),
+        DEFINER("definer");
+
+        private final String name;
+
+        private EnumIngredient(String name)
+        {
+            this.name = name;
+        }
+
+        public String toString()
+        {
+            return this.name;
+        }
+
+        public String getName()
+        {
+            return this.name;
+        }
     }
 }
