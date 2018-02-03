@@ -1,8 +1,8 @@
 {
 	"__comment": "Designed by Mylimo",
 	"textures": {
-		"particle": "miraculous:blocks/",
-		"log_olive_top": "miraculous:blocks/",
+		"particle": "miraculous:blocks/log_olive_top",
+		"log_olive_top": "miraculous:blocks/log_olive_top",
 		"log_olive": "miraculous:blocks/log_olive",
 		"planks_olive": "miraculous:blocks/planks_olive"
 	},
