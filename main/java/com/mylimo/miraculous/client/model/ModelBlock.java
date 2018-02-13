@@ -1,5 +1,6 @@
 package com.mylimo.miraculous.client.model;
 
+import com.mylimo.miraculous.block.BlockOliveOilTorch;
 import com.mylimo.miraculous.block.BlockOliveSapling;
 import com.mylimo.miraculous.init.ModBlocks;
 import net.minecraft.block.Block;
@@ -22,9 +23,12 @@ public class ModelBlock
         registerBlock(ModBlocks.OLIVE_SAPLING);
         registerBlock(ModBlocks.OLIVE_PLANKS);
         registerBlock(ModBlocks.MAGIC_BOWL);
+        registerBlock(ModBlocks.OLIVE_OIL_TORCH);
+        registerBlock(ModBlocks.MAGIC_STAND);
 
         registerBlockWithStateMapper(ModBlocks.OLIVE_LEAVES, (new StateMap.Builder()).ignore(BlockLeaves.CHECK_DECAY, BlockLeaves.DECAYABLE).build());
         registerBlockWithStateMapper(ModBlocks.OLIVE_SAPLING, (new StateMap.Builder()).ignore(BlockOliveSapling.STAGE).build());
+        //registerBlockWithStateMapper(ModBlocks.OLIVE_OIL_TORCH, (new StateMap.Builder()).ignore(BlockOliveOilTorch.FACING).build());
     }
 
     private static void registerBlock(Block block)

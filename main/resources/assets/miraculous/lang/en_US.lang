@@ -40,6 +40,8 @@ tile.olive_leaves.name=Olive Leaves
 tile.olive_sapling.name=Olive Sapling
 tile.olive_planks.name=Olive Wood Planks
 tile.magic_bowl.name=Magic Bowl
+tile.olive_oil_torch.name=Olive Oil Torch
+tile.magic_stand.name=Magic Stand
 
 #PotionEffects
 potion.effect.holy_oil=Holy Oil

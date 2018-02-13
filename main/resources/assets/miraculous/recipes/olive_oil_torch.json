@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "O",
+    "S"
+  ],
+  "key": {
+    "O": {
+      "item": "miraculous:holy_oil_flask",
+      "data": 0
+      },
+    "S": {
+      "item": "miraculous:olive_wood_stick",
+      "data": 0
+    }
+    },
+
+  "result": {
+    "item": "miraculous:olive_oil_torch",
+    "count": 4
+  }
+}

@@ -30,6 +30,7 @@ public class Miraculous
         ModItems.init(event);
         ModBlocks.init();
         ModEntities.init();
+        ModTileEntities.init();
 
         ModPotions.init();
 

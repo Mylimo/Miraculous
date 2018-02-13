@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=up": { "model": "miraculous:olive_oil_torch" },
+        "facing=east": { "model": "miraculous:olive_oil_torch_wall" },
+        "facing=south": { "model": "miraculous:olive_oil_torch_wall", "y": 90 },
+        "facing=west": { "model": "miraculous:olive_oil_torch_wall", "y": 180 },
+        "facing=north": { "model": "miraculous:olive_oil_torch_wall", "y": 270 }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/torch",
+    "textures": {
+        "torch": "miraculous:blocks/olive_oil_torch"
+    }
+}

@@ -46,8 +46,13 @@ public class Reference
     public static final String OLIVE_SAPLING = "olive_sapling";
     public static final String OLIVE_PLANKS = "olive_planks";
     public static final String MAGIC_BOWL = "magic_bowl";
+    public static final String OLIVE_OIL_TORCH = "olive_oil_torch";
+    public static final String MAGIC_STAND = "magic_stand";
 
     //PotionNames
     public static final String HOLY_WATER = "holy_water";
     public static final String HOLY_OIL = "holy_oil";
+
+    //TileEntityNames
+    public static final String MAGIC_STAND_TE = "magic_stand_te";
 }
