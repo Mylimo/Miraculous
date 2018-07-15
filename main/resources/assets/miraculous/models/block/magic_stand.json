@@ -1,0 +1,49 @@
+{
+	"__comment": "Designed by Mylimo",
+	"textures": {
+		"particle": "miraculous:blocks/log_olive_top",
+		"texture": "miraculous:blocks/log_olive",
+		"texture1": "miraculous:blocks/log_olive_top"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 5, 0, 5 ],
+			"to": [ 11, 1, 11 ],
+			"faces": {
+				"down": { "uv": [ 6, 6, 10, 10 ], "texture": "#texture" },
+				"up": { "uv": [ 6, 6, 10, 10 ], "texture": "#texture" },
+				"north": { "uv": [ 6, 15, 10, 16 ], "texture": "#texture" },
+				"south": { "uv": [ 6, 15, 10, 16 ], "texture": "#texture" },
+				"west": { "uv": [ 6, 15, 10, 16 ], "texture": "#texture" },
+				"east": { "uv": [ 6, 15, 10, 16 ], "texture": "#texture" }
+			}
+		},
+		{
+			"__comment": "Box2",
+			"from": [ 6, 1, 6 ],
+			"to": [ 10, 6, 10 ],
+			"faces": {
+				"down": { "uv": [ 6, 6, 10, 10 ], "texture": "#texture" },
+				"up": { "uv": [ 6, 6, 10, 10 ], "texture": "#texture" },
+				"north": { "uv": [ 6, 10, 10, 15 ], "texture": "#texture" },
+				"south": { "uv": [ 6, 10, 10, 15 ], "texture": "#texture" },
+				"west": { "uv": [ 6, 10, 10, 15 ], "texture": "#texture" },
+				"east": { "uv": [ 6, 10, 10, 15 ], "texture": "#texture" }
+			}
+		},
+		{
+			"__comment": "Box3",
+			"from": [ 5, 6, 5 ],
+			"to": [ 11, 7, 11 ],
+			"faces": {
+				"down": { "uv": [ 5, 5, 11, 11 ], "texture": "#texture" },
+				"up": { "uv": [ 5, 5, 11, 11 ], "texture": "#texture1" },
+				"north": { "uv": [ 5, 9, 11, 10 ], "texture": "#texture" },
+				"south": { "uv": [ 5, 9, 11, 10 ], "texture": "#texture" },
+				"west": { "uv": [ 5, 9, 11, 10 ], "texture": "#texture" },
+				"east": { "uv": [ 5, 9, 11, 10 ], "texture": "#texture" }
+			}
+		}
+	]
+}
