@@ -36,7 +36,7 @@ public class ItemBlazeShotShell extends Item
         ItemStack shell = player.getHeldItem(hand);
         ItemStack shotgun = player.inventory.getStackInSlot(findShotgun(player));
 
-        if (shell.getItem() instanceof ItemBlazeShotShell && (shotgun.getTagCompound().getString("shotType").contentEquals("Blaze") || shotgun.getTagCompound().getString("shotType").contentEquals("Empty")))
+        if (shell.getItem() instanceof ItemBlazeShotShell && !shotgun.isEmpty() && (shotgun.getTagCompound().getString("shotType").contentEquals("Blaze") || shotgun.getTagCompound().getString("shotType").contentEquals("Empty")) && !hand.equals(EnumHand.OFF_HAND))
         {
             switch (shotgun.getTagCompound().getInteger("shellAmount"))
             {

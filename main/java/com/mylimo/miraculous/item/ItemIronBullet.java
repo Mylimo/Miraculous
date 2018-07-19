@@ -35,7 +35,7 @@ public class ItemIronBullet extends Item
         ItemStack bullet = player.getHeldItem(hand);
         ItemStack colt = player.inventory.getStackInSlot(findColt(player));
 
-        if (bullet.getItem() instanceof ItemIronBullet && (colt.getTagCompound().getString("bulletType").contentEquals("Iron") || colt.getTagCompound().getString("bulletType").contentEquals("Empty")))
+        if (bullet.getItem() instanceof ItemIronBullet && !colt.isEmpty() && (colt.getTagCompound().getString("bulletType").contentEquals("Iron") || colt.getTagCompound().getString("bulletType").contentEquals("Empty")) && !hand.equals(EnumHand.OFF_HAND))
         {
             int bulletAmount = colt.getTagCompound().getInteger("bulletAmount");
             if (bulletAmount == 0)

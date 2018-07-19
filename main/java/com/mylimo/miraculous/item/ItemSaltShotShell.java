@@ -35,7 +35,7 @@ public class ItemSaltShotShell extends Item
         ItemStack shell = player.getHeldItem(hand);
         ItemStack shotgun = player.inventory.getStackInSlot(findShotgun(player));
 
-        if (shell.getItem() instanceof ItemSaltShotShell && (shotgun.getTagCompound().getString("shotType").contentEquals("Salt") || shotgun.getTagCompound().getString("shotType").contentEquals("Empty")))
+        if (shell.getItem() instanceof ItemSaltShotShell && shotgun.isEmpty() && (shotgun.getTagCompound().getString("shotType").contentEquals("Salt") || shotgun.getTagCompound().getString("shotType").contentEquals("Empty")) && !hand.equals(EnumHand.OFF_HAND))
         {
             switch (shotgun.getTagCompound().getInteger("shellAmount"))
             {
