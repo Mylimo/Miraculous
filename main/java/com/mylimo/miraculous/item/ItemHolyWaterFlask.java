@@ -11,4 +11,5 @@ public class ItemHolyWaterFlask extends Item
 
         this.setMaxStackSize(1);
     }
+
 }

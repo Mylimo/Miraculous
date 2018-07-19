@@ -35,6 +35,7 @@ public class Reference
     public static final String ROSARY_FILLED = "rosary_filled";
     public static final String COLT = "colt";
     public static final String IRON_BULLET = "iron_bullet";
+    public static final String GLASS_SHARDS = "glass_shards";
 
 
     //BlockNames

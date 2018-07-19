@@ -10,6 +10,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -69,7 +70,8 @@ public class BlockMagicBowl extends Block
 
     public boolean onBlockActivated(World world, BlockPos blockPos, IBlockState iBlockState, EntityPlayer player, EnumHand enumHand, EnumFacing enumFacing, float hitX, float hitY, float hitZ)
     {
-        return true;
+        world.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, blockPos.getX() + 0.5D, blockPos.getY() + 0.2D, blockPos.getZ() + 0.5D,0.0D, 0.01D, 0.0D);
+        return false;
     }
 
     public static enum EnumIngredient implements IStringSerializable

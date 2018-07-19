@@ -22,9 +22,9 @@ public class ModItems
     public static ItemHolyOilFlask HOLY_OIL_FLASK;
     public static ItemHolyWaterFlask HOLY_WATER_FLASK;
     public static ItemRosary ROSARY;
-    public static ItemRosaryFilled ROSARY_FILLED;
     public static ItemColt COLT;
     public static ItemIronBullet IRON_BULLET;
+    public static ItemGlassShards GLASS_SHARDS;
 
     public static void init(FMLPreInitializationEvent event)
     {
@@ -45,9 +45,9 @@ public class ModItems
         HOLY_OIL_FLASK = new ItemHolyOilFlask();
         HOLY_WATER_FLASK = new ItemHolyWaterFlask();
         ROSARY = new ItemRosary();
-        ROSARY_FILLED = new ItemRosaryFilled();
         COLT = new ItemColt();
         IRON_BULLET = new ItemIronBullet();
+        GLASS_SHARDS = new ItemGlassShards();
     }
 
 }

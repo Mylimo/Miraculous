@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:glass_shards2"
+    ]
+  },
+  "criteria": {
+    "has_glass_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:glass_pane"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:glass_shards2"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_block",
+      "has_the_recipe"
+    ]
+  ]
+}

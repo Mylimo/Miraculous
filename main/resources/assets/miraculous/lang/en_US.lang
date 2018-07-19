@@ -26,9 +26,9 @@ item.holy_water_flask.name=Holy Water Flask
 item.salty_cracker.name=Salty Cracker
 item.olive_cracker.name=Olive Cracker
 item.rosary.name=Rosary
-item.rosary_filled.name=Filled Rosary
 item.colt.name=Colt
 item.iron_bullet.name=Iron Bullet
+item.glass_shards.name=Glass Shards
 
 
 #Blocks
