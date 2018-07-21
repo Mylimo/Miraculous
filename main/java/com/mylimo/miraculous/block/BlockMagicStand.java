@@ -1,11 +1,14 @@
 package com.mylimo.miraculous.block;
 
 import com.mylimo.miraculous.Reference;
+import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -62,5 +65,15 @@ public class BlockMagicStand extends Block
         return worldIn.getBlockState(pos).isTopSolid() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 
+    @Override
+    public boolean hasTileEntity(IBlockState state)
+    {
+        return true;
+    }
 
+    @Override
+    public TileEntity createTileEntity(World world, IBlockState state)
+    {
+        return new TileEntityMagicStand(ItemStack.EMPTY);
+    }
 }

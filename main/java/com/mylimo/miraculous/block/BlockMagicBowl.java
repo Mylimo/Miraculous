@@ -1,25 +1,25 @@
 package com.mylimo.miraculous.block;
 
 import com.mylimo.miraculous.Reference;
+import com.mylimo.miraculous.tileentity.TileEntityMagicBowl;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockMagicBowl extends Block
+public class BlockMagicBowl extends Block implements ITileEntityProvider
 {
-    public static final PropertyEnum<BlockMagicBowl.EnumIngredient> INGREDIENT = PropertyEnum.create("ingredient", BlockMagicBowl.EnumIngredient.class);
     public static final AxisAlignedBB AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.1875D, 0.8125D, 0.25D, 0.8125D);
 
     public BlockMagicBowl()
@@ -68,34 +68,27 @@ public class BlockMagicBowl extends Block
         return worldIn.getBlockState(pos).isTopSolid() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta)
+    {
+        return new TileEntityMagicBowl();
+    }
+
     public boolean onBlockActivated(World world, BlockPos blockPos, IBlockState iBlockState, EntityPlayer player, EnumHand enumHand, EnumFacing enumFacing, float hitX, float hitY, float hitZ)
     {
         world.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, blockPos.getX() + 0.5D, blockPos.getY() + 0.2D, blockPos.getZ() + 0.5D,0.0D, 0.01D, 0.0D);
         return false;
     }
 
-    public static enum EnumIngredient implements IStringSerializable
+    @Override
+    public boolean hasTileEntity(IBlockState state)
     {
-        EMPTY("empty"),
-        EXECUTOR("executer"),
-        POWER("power"),
-        DEFINER("definer");
+        return true;
+    }
 
-        private final String name;
-
-        private EnumIngredient(String name)
-        {
-            this.name = name;
-        }
-
-        public String toString()
-        {
-            return this.name;
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
+    @Override
+    public TileEntity createTileEntity(World world, IBlockState state)
+    {
+        return new TileEntityMagicBowl();
     }
 }

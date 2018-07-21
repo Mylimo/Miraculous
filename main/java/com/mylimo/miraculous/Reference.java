@@ -55,5 +55,6 @@ public class Reference
     public static final String HOLY_OIL = "holy_oil";
 
     //TileEntityNames
+    public static final String MAGIC_BOWL_TE = "magic_bowl_te";
     public static final String MAGIC_STAND_TE = "magic_stand_te";
 }

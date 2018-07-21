@@ -126,7 +126,7 @@ public class ItemColt extends Item
                 itemStack.damageItem(1, player );
                 EntityBullet entityBullet = new EntityBullet(world, player);
                 entityBullet.readFromNBT(itemStack.getTagCompound());
-                entityBullet.setHeadingFromThrower(player, player.rotationPitch, player.rotationYaw, 0.0F, 5.0F, 0.1F);
+                entityBullet.shoot(player, player.rotationPitch, player.rotationYaw, 0.0F, 5.0F, 0.1F);
                 world.spawnEntity(entityBullet);
 
         }

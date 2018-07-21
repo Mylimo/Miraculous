@@ -112,7 +112,7 @@ public class BlockOliveLog extends net.minecraft.block.BlockRotatedPillar
     @Override public boolean canSustainLeaves(IBlockState state, net.minecraft.world.IBlockAccess world, BlockPos pos){ return true; }
     @Override public boolean isWood(net.minecraft.world.IBlockAccess world, BlockPos pos){ return true; }
 
-    public static enum EnumAxis implements IStringSerializable
+    public enum EnumAxis implements IStringSerializable
     {
         X("x"),
         Y("y"),
@@ -121,7 +121,7 @@ public class BlockOliveLog extends net.minecraft.block.BlockRotatedPillar
 
         private final String name;
 
-        private EnumAxis(String name)
+        EnumAxis(String name)
         {
             this.name = name;
         }
