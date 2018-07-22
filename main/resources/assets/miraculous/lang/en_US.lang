@@ -29,6 +29,9 @@ item.rosary.name=Rosary
 item.colt.name=Colt
 item.iron_bullet.name=Iron Bullet
 item.glass_shards.name=Glass Shards
+item.ground_coal.name=Ground Coal
+item.angelic_crystal.name=Angelic Crystal
+item.demonic_steel.name=Demonic Steel
 
 
 #Blocks

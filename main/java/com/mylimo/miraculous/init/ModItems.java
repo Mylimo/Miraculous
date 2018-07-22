@@ -25,6 +25,9 @@ public class ModItems
     public static ItemColt COLT;
     public static ItemIronBullet IRON_BULLET;
     public static ItemGlassShards GLASS_SHARDS;
+    public static ItemGroundCoal GROUND_COAL;
+    public static ItemAngelicCrystal ANGELIC_CRYSTAL;
+    public static ItemDemonicSteel DEMONIC_STEEL;
 
     public static void init(FMLPreInitializationEvent event)
     {
@@ -48,6 +51,9 @@ public class ModItems
         COLT = new ItemColt();
         IRON_BULLET = new ItemIronBullet();
         GLASS_SHARDS = new ItemGlassShards();
+        GROUND_COAL = new ItemGroundCoal();
+        ANGELIC_CRYSTAL = new ItemAngelicCrystal();
+        DEMONIC_STEEL = new ItemDemonicSteel();
     }
 
 }

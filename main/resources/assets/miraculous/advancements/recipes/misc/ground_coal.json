@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:ground_coal"
+    ]
+  },
+  "criteria": {
+    "has_coal_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:coal"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:ground_coal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_coal_item",
+      "has_the_recipe"
+    ]
+  ]
+}

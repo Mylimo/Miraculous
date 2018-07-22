@@ -36,6 +36,9 @@ public class Reference
     public static final String COLT = "colt";
     public static final String IRON_BULLET = "iron_bullet";
     public static final String GLASS_SHARDS = "glass_shards";
+    public static final String GROUND_COAL = "ground_coal";
+    public static final String ANGELIC_CRYSTAL = "angelic_crystal";
+    public static final String DEMONIC_STEEL = "demonic_steel";
 
 
     //BlockNames
