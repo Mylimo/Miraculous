@@ -3,7 +3,6 @@ package com.mylimo.miraculous.init;
 import com.mylimo.miraculous.Reference;
 import com.mylimo.miraculous.tileentity.TileEntityMagicBowl;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
-import com.mylimo.miraculous.tileentity.TileEntityMagicStandOld;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;

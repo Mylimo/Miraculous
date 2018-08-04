@@ -3,7 +3,6 @@ package com.mylimo.miraculous.block;
 import com.mylimo.miraculous.Reference;
 import com.mylimo.miraculous.helper.TileEntityHelper;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
-import com.mylimo.miraculous.tileentity.TileEntityMagicStandOld;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
@@ -21,8 +20,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import org.lwjgl.Sys;
 
 public class BlockMagicStand extends Block
 {
@@ -122,10 +119,12 @@ public class BlockMagicStand extends Block
     @Override
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
     {
-        TileEntityMagicStandOld tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStandOld.class);
+        TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStand.class);
         if (tileMagicStand != null)
         {
-            InventoryHelper.dropInventoryItems(worldIn, pos, tileMagicStand );
+            IItemHandler itemHandler = tileMagicStand.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+
+            InventoryHelper.spawnItemStack(worldIn, pos.getX(), pos.getY(), pos.getZ(), itemHandler.extractItem(0,1, false));
         }
         super.breakBlock(worldIn, pos, state);
     }

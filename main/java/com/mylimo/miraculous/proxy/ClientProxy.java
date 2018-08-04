@@ -8,7 +8,6 @@ import com.mylimo.miraculous.client.render.RenderShot;
 import com.mylimo.miraculous.entity.EntityBullet;
 import com.mylimo.miraculous.entity.EntityShot;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
-import com.mylimo.miraculous.tileentity.TileEntityMagicStandOld;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
