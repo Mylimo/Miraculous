@@ -1,134 +1,76 @@
 package com.mylimo.miraculous.tileentity;
 
-import com.mylimo.miraculous.Reference;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityMagicStand extends TileEntity implements IInventory
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+
+import javax.annotation.Nullable;
+
+public class TileEntityMagicStand extends TileEntity implements ICapabilityProvider
 {
-    private ItemStack displayItem;
+    private ItemStackHandler itemStackHandler;
 
     public TileEntityMagicStand()
     {
-        this.displayItem = ItemStack.EMPTY;
+        this.itemStackHandler = new ItemStackHandler(1);
+        this.itemStackHandler.setStackInSlot(0, ItemStack.EMPTY);
     }
 
     public TileEntityMagicStand(ItemStack displayItem)
     {
-        this.displayItem = displayItem;
-    }
-
-
-    @Override
-    public int getSizeInventory()
-    {
-        return 1;
+        this.itemStackHandler = new ItemStackHandler(1);
+        this.itemStackHandler.setStackInSlot(0, displayItem);
     }
 
     @Override
-    public boolean isEmpty()
+    public void readFromNBT(NBTTagCompound compound)
     {
-        return displayItem.isEmpty();
+        super.readFromNBT(compound);
+
+        this.itemStackHandler.deserializeNBT(compound.getCompoundTag("ItemStackHandler"));
     }
 
     @Override
-    public ItemStack getStackInSlot(int index)
+    public NBTTagCompound writeToNBT(NBTTagCompound compound)
     {
-        return displayItem;
+        super.writeToNBT(compound);
+
+        compound.setTag("ItemStackHandler", this.itemStackHandler.serializeNBT());
+
+        return compound;
+    }
+
+    @Nullable
+    @Override
+    public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
+    {
+        if (capability.equals(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY))
+        {
+            return (T) this.itemStackHandler;
+        }
+
+        return super.getCapability(capability, facing);
     }
 
     @Override
-    public ItemStack decrStackSize(int index, int count)
+    public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing)
     {
-        ItemStack decreasedStack = displayItem;
-        displayItem = ItemStack.EMPTY;
-        return decreasedStack;
-    }
-
-    @Override
-    public ItemStack removeStackFromSlot(int index)
-    {
-        ItemStack removedStack = displayItem;
-        displayItem = ItemStack.EMPTY;
-        return removedStack;
-    }
-
-    @Override
-    public void setInventorySlotContents(int index, ItemStack stack)
-    {
-        displayItem = stack;
-    }
-
-    @Override
-    public int getInventoryStackLimit()
-    {
-        return 1;
-    }
-
-    @Override
-    public boolean isUsableByPlayer(EntityPlayer player)
-    {
-        return false;
-    }
-
-    @Override
-    public void openInventory(EntityPlayer player)
-    {
-
-    }
-
-    @Override
-    public void closeInventory(EntityPlayer player)
-    {
-
-    }
-
-    @Override
-    public boolean isItemValidForSlot(int index, ItemStack stack)
-    {
-        if (index == 0)
+        if (capability.equals(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY))
         {
             return true;
         }
-        else return false;
-    }
 
-    @Override
-    public int getField(int id)
-    {
-        return 0;
-    }
-
-    @Override
-    public void setField(int id, int value)
-    {
-
-    }
-
-    @Override
-    public int getFieldCount()
-    {
-        return 0;
-    }
-
-    @Override
-    public void clear()
-    {
-
-    }
-
-    @Override
-    public String getName()
-    {
-        return Reference.MAGIC_STAND_TE;
-    }
-
-    @Override
-    public boolean hasCustomName()
-    {
-        return false;
+        return super.hasCapability(capability, facing);
     }
 
     @Override
@@ -136,4 +78,18 @@ public class TileEntityMagicStand extends TileEntity implements IInventory
     {
         return true;
     }
+
+    @Override
+    public NBTTagCompound getUpdateTag()
+    {
+        return writeToNBT(new NBTTagCompound());
+    }
+
+    @Override
+    public void handleUpdateTag(NBTTagCompound compound)
+    {
+        readFromNBT(compound);
+    }
+
+
 }

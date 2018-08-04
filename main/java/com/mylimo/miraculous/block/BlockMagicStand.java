@@ -3,6 +3,7 @@ package com.mylimo.miraculous.block;
 import com.mylimo.miraculous.Reference;
 import com.mylimo.miraculous.helper.TileEntityHelper;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
+import com.mylimo.miraculous.tileentity.TileEntityMagicStandOld;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
@@ -18,6 +19,10 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+import org.lwjgl.Sys;
 
 public class BlockMagicStand extends Block
 {
@@ -94,18 +99,20 @@ public class BlockMagicStand extends Block
         TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStand.class);
         if (tileMagicStand != null)
         {
+            IItemHandler itemHandler = tileMagicStand.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, facing);
 
-            if (tileMagicStand.isEmpty())
+            if (itemHandler.getStackInSlot(0).isEmpty())
             {
                 ItemStack heldItem = new ItemStack(playerIn.getHeldItem(hand).getItem(), 1, playerIn.getHeldItem(hand).getMetadata());
                 playerIn.getHeldItem(hand).shrink(1);
-                tileMagicStand.setInventorySlotContents(0, heldItem);
+                itemHandler.insertItem(0, heldItem, false);
+                worldIn.markChunkDirty(pos, tileMagicStand);
             }
-            else if (playerIn.inventory.addItemStackToInventory(tileMagicStand.getStackInSlot(0)))
+            else if (playerIn.getHeldItem(hand).isEmpty())
             {
-                tileMagicStand.setInventorySlotContents(0, ItemStack.EMPTY);
+                playerIn.setHeldItem(hand, itemHandler.extractItem(0,1,false));
+                worldIn.markChunkDirty(pos, tileMagicStand);
             }
-
             return true;
         }
         else return false;
@@ -115,7 +122,7 @@ public class BlockMagicStand extends Block
     @Override
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
     {
-        TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStand.class);
+        TileEntityMagicStandOld tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStandOld.class);
         if (tileMagicStand != null)
         {
             InventoryHelper.dropInventoryItems(worldIn, pos, tileMagicStand );
