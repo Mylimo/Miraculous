@@ -1,7 +1,7 @@
 package com.mylimo.miraculous.block;
 
 import com.mylimo.miraculous.Reference;
-import net.minecraft.block.*;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;

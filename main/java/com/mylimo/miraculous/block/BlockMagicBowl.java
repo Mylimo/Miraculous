@@ -44,6 +44,8 @@ public class BlockMagicBowl extends Block implements ITileEntityProvider
         return false;
     }
 
+
+
     public boolean isFullCube(IBlockState state)
     {
         return false;
@@ -66,6 +68,12 @@ public class BlockMagicBowl extends Block implements ITileEntityProvider
     private boolean canBePlacedOn(World worldIn, BlockPos pos)
     {
         return worldIn.getBlockState(pos).isTopSolid() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
+    }
+
+    @Override
+    public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return false;
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.mylimo.miraculous.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class BlockSaltBlock extends Block
 {

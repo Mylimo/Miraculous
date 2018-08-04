@@ -1,14 +1,8 @@
 package com.mylimo.miraculous.item;
 
-import com.mylimo.miraculous.Reference;
 import com.mylimo.miraculous.creativetab.CreativeTab;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ItemMiraculous extends Item
 {

@@ -1,9 +1,9 @@
 package com.mylimo.miraculous.block;
 
+import com.mylimo.miraculous.Reference;
 import com.mylimo.miraculous.init.ModBlocks;
 import com.mylimo.miraculous.init.ModItems;
 import com.mylimo.miraculous.item.ItemOliveLeaves;
-import com.mylimo.miraculous.Reference;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.SoundType;

@@ -1,6 +1,5 @@
 package com.mylimo.miraculous.potion;
 
-import com.mylimo.miraculous.potion.PotionMiraculous;
 import com.mylimo.miraculous.Reference;
 import net.minecraft.util.ResourceLocation;
 

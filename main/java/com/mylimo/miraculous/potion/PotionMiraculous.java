@@ -6,10 +6,11 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
-//import net.minecraftforge.fml.common.registry.GameData;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+//import net.minecraftforge.fml.common.registry.GameData;
 
 public class PotionMiraculous extends Potion
 {

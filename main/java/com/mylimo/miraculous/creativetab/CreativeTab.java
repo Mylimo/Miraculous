@@ -1,7 +1,7 @@
 package com.mylimo.miraculous.creativetab;
 
-import com.mylimo.miraculous.init.ModItems;
 import com.mylimo.miraculous.Reference;
+import com.mylimo.miraculous.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 

@@ -1,6 +1,5 @@
 package com.mylimo.miraculous.client.model;
 
-import com.mylimo.miraculous.block.BlockOliveOilTorch;
 import com.mylimo.miraculous.block.BlockOliveSapling;
 import com.mylimo.miraculous.init.ModBlocks;
 import net.minecraft.block.Block;

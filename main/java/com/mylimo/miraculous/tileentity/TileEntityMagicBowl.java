@@ -8,12 +8,13 @@ import net.minecraft.util.NonNullList;
 
 public class TileEntityMagicBowl extends TileEntity implements IInventory
 {
-    private NonNullList<ItemStack> bowlItems = NonNullList.withSize(3, ItemStack.EMPTY);
+    private NonNullList<ItemStack> bowlItems;
 
     public TileEntityMagicBowl()
     {
-
+        this.bowlItems = NonNullList.withSize(3, ItemStack.EMPTY);
     }
+
 
     public TileEntityMagicBowl(NonNullList<ItemStack> bowlItems)
     {

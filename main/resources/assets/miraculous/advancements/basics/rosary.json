@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "miraculous:rosary_filled"
+            "item": "miraculous:rosary"
         },
         "title": {
             "translate": "advancements.basics.rosary.title"
@@ -17,7 +17,7 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "miraculous:rosary_filled"
+                        "item": "miraculous:rosary"
                     }
                 ]
             }

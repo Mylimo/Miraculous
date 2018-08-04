@@ -1,11 +1,8 @@
 package com.mylimo.miraculous.world;
 
-import com.mylimo.miraculous.block.BlockOliveSapling;
-import com.mylimo.miraculous.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;

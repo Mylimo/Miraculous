@@ -1,5 +1,5 @@
 {
-	"__comment": "Designed by Mylimo",
+	"parent": "block/block",
 	"textures": {
 		"particle": "miraculous:blocks/log_olive_top",
 		"texture": "miraculous:blocks/log_olive",

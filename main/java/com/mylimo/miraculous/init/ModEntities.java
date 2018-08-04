@@ -1,8 +1,9 @@
 package com.mylimo.miraculous.init;
 
 import com.mylimo.miraculous.Miraculous;
-import com.mylimo.miraculous.entity.*;
 import com.mylimo.miraculous.Reference;
+import com.mylimo.miraculous.entity.EntityBullet;
+import com.mylimo.miraculous.entity.EntityShot;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;

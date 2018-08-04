@@ -1,14 +1,19 @@
 package com.mylimo.miraculous.block;
 
 import com.mylimo.miraculous.Reference;
+import com.mylimo.miraculous.helper.TileEntityHelper;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -66,6 +71,12 @@ public class BlockMagicStand extends Block
     }
 
     @Override
+    public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return false;
+    }
+
+    @Override
     public boolean hasTileEntity(IBlockState state)
     {
         return true;
@@ -75,5 +86,40 @@ public class BlockMagicStand extends Block
     public TileEntity createTileEntity(World world, IBlockState state)
     {
         return new TileEntityMagicStand(ItemStack.EMPTY);
+    }
+
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    {
+        TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStand.class);
+        if (tileMagicStand != null)
+        {
+
+            if (tileMagicStand.isEmpty())
+            {
+                ItemStack heldItem = new ItemStack(playerIn.getHeldItem(hand).getItem(), 1, playerIn.getHeldItem(hand).getMetadata());
+                playerIn.getHeldItem(hand).shrink(1);
+                tileMagicStand.setInventorySlotContents(0, heldItem);
+            }
+            else if (playerIn.inventory.addItemStackToInventory(tileMagicStand.getStackInSlot(0)))
+            {
+                tileMagicStand.setInventorySlotContents(0, ItemStack.EMPTY);
+            }
+
+            return true;
+        }
+        else return false;
+
+    }
+
+    @Override
+    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+    {
+        TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(worldIn, pos, TileEntityMagicStand.class);
+        if (tileMagicStand != null)
+        {
+            InventoryHelper.dropInventoryItems(worldIn, pos, tileMagicStand );
+        }
+        super.breakBlock(worldIn, pos, state);
     }
 }

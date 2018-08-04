@@ -4,6 +4,7 @@ import com.mylimo.miraculous.Reference;
 import com.mylimo.miraculous.tileentity.TileEntityMagicBowl;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModTileEntities
@@ -16,6 +17,6 @@ public class ModTileEntities
 
     private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String tileEntityName)
     {
-        GameRegistry.registerTileEntity(tileEntityClass, tileEntityName);
+        GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation("miraculous", tileEntityName));
     }
 }
