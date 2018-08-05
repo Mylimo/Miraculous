@@ -9,6 +9,7 @@ public class ItemRosary extends Item
     {
         ItemMiraculous.registerItem(Reference.ROSARY, this);
 
-        this.setMaxStackSize(16);
+        this.setMaxStackSize(1);
+        this.setMaxDamage(255);
     }
 }

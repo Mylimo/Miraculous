@@ -24,7 +24,6 @@ public class TileEntityMagicBowl extends TileEntity implements ICapabilityProvid
     public TileEntityMagicBowl(ItemStack executor, ItemStack power, ItemStack definer)
     {
         this.itemStackHandler = new ItemStackHandler(NonNullList.from(ItemStack.EMPTY, executor, power, definer));
-        System.out.println(itemStackHandler.getSlots());
     }
 
     @Nullable

@@ -133,7 +133,6 @@ public class StructureOliveTree
             leftDown = 2;
         }
 
-        //System.out.println("trunk: " + rightUp + rightDown + leftDown + leftUp);
         return new int[]{rightUp, rightDown, leftDown, leftUp};
     }
 
@@ -163,7 +162,6 @@ public class StructureOliveTree
             leftDown = 2;
         }
 
-        //System.out.println("tree: " + rightUp + rightDown + leftDown + leftUp);
         return new int[]{rightUp, rightDown, leftDown, leftUp};
     }
 

@@ -41,7 +41,7 @@ public class RenderMagicBowl extends FastTESR<TileEntityMagicBowl>
         GlStateManager.pushMatrix();
         GlStateManager.translate(x + 0.5f, y + 0.2f, z + 0.344f);
         GlStateManager.scale(0.5f, 0.5f, 0.5f);
-        GlStateManager.rotate( angle ,1.0f,0.0f,0.0f);
+        GlStateManager.rotate( angle ,0.0f,1.0f,0.0f);
         GlStateManager.disableLighting();
         RenderHelper.enableStandardItemLighting();
         Minecraft.getMinecraft().getRenderItem().renderItem(executor, ItemCameraTransforms.TransformType.GROUND);

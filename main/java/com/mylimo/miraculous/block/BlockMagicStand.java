@@ -78,6 +78,7 @@ public class BlockMagicStand extends Block
         return false;
     }
 
+
     @Override
     public boolean hasTileEntity(IBlockState state)
     {
@@ -105,9 +106,10 @@ public class BlockMagicStand extends Block
                 itemHandler.insertItem(0, heldItem, false);
                 worldIn.markChunkDirty(pos, tileMagicStand);
             }
-            else if (playerIn.getHeldItem(hand).isEmpty())
+            else
             {
-                playerIn.setHeldItem(hand, itemHandler.extractItem(0,1,false));
+                playerIn.inventory.addItemStackToInventory(itemHandler.extractItem(0,1,true));
+                itemHandler.extractItem(0,1,false);
                 worldIn.markChunkDirty(pos, tileMagicStand);
             }
             return true;

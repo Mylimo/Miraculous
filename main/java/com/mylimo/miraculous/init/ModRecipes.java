@@ -1,6 +1,6 @@
 package com.mylimo.miraculous.init;
 
-import com.mylimo.miraculous.recipe.BowlMagicRecipeRegistry;
+import com.mylimo.miraculous.recipe.RecipeBowlMagicRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -20,11 +20,11 @@ public class ModRecipes
         final ItemStack oliveSapling = new ItemStack(ModBlocks.OLIVE_SAPLING);
         final ItemStack holyWater = new ItemStack(ModItems.HOLY_WATER_FLASK);
         final ItemStack glassShards = new ItemStack(ModItems.GLASS_SHARDS);
-        final ItemStack groundCoal = new ItemStack(Items.COAL);
+        final ItemStack groundCoal = new ItemStack(ModItems.GROUND_COAL);
         final ItemStack diamond = new ItemStack(Items.DIAMOND);
-        final ItemStack angelicCrystal = new ItemStack(Items.GLASS_BOTTLE);
+        final ItemStack angelicCrystal = new ItemStack(ModItems.ANGELIC_CRYSTAL);
         final ItemStack ironIngot = new ItemStack(Items.IRON_INGOT);
-        final ItemStack demonicSteel = new ItemStack(Items.NETHERBRICK);
+        final ItemStack demonicSteel = new ItemStack(ModItems.DEMONIC_STEEL);
 
         //Furnace Recipes
         GameRegistry.addSmelting(ModBlocks.OLIVE_LEAVES, ash, 0.1F);
@@ -36,7 +36,7 @@ public class ModRecipes
         BrewingRecipeRegistry.addRecipe(flask, oliveSapling, holyWater);
 
         //BowlMagic
-        BowlMagicRecipeRegistry.addRecipe(true, glassShards, groundCoal, salt,diamond,angelicCrystal);
-        BowlMagicRecipeRegistry.addRecipe(false, glassShards, groundCoal,ash, ironIngot, demonicSteel);
+        RecipeBowlMagicRegistry.addRecipe(true, glassShards, groundCoal, salt,diamond,angelicCrystal);
+        RecipeBowlMagicRegistry.addRecipe(false, glassShards, groundCoal,ash, ironIngot, demonicSteel);
     }
 }
