@@ -13,6 +13,8 @@ import net.minecraftforge.items.IItemHandler;
 
 public class RenderMagicStand extends FastTESR<TileEntityMagicStand>
 {
+    private float angle = 0;
+
     @Override
     public void renderTileEntityFast(TileEntityMagicStand te, double x, double y, double z, float partialTicks, int destroyStage, float partial, BufferBuilder buffer)
     {
@@ -25,11 +27,14 @@ public class RenderMagicStand extends FastTESR<TileEntityMagicStand>
             return;
         }
 
+
+
         GlStateManager.pushMatrix();
         GlStateManager.translate(x + 0.5f, y + 0.58f, z + 0.5f);
-
+        GlStateManager.rotate( angle ,0.0f,1.0f,0);
+        angle = angle + 1;
+        if (angle == 361) angle = 0;
         GlStateManager.disableLighting();
-
         RenderHelper.enableStandardItemLighting();
         Minecraft.getMinecraft().getRenderItem().renderItem(itemStack, ItemCameraTransforms.TransformType.GROUND);
         RenderHelper.disableStandardItemLighting();

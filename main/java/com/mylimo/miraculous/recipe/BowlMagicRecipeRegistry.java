@@ -15,7 +15,7 @@ public class BowlMagicRecipeRegistry
         return bowlMagicRecipes.add(new BowlMagicRecipe(angelicRecipe, executor, power,definer, input,output));
     }
 
-    public ItemStack getOutput(@Nonnull boolean angelicRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input)
+    public static ItemStack getOutput(@Nonnull boolean angelicRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input)
     {
         if (executor.equals(ItemStack.EMPTY) || power.equals(ItemStack.EMPTY) || definer.equals(ItemStack.EMPTY) || input.equals(ItemStack.EMPTY)) return ItemStack.EMPTY;
 

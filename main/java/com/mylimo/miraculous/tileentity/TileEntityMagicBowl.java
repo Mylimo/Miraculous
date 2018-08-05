@@ -1,125 +1,89 @@
 package com.mylimo.miraculous.tileentity;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 
-public class TileEntityMagicBowl extends TileEntity implements IInventory
+import javax.annotation.Nullable;
+
+public class TileEntityMagicBowl extends TileEntity implements ICapabilityProvider
 {
-    private NonNullList<ItemStack> bowlItems;
+    private ItemStackHandler itemStackHandler;
 
     public TileEntityMagicBowl()
     {
-        this.bowlItems = NonNullList.withSize(3, ItemStack.EMPTY);
+        this.itemStackHandler = new ItemStackHandler(3);
     }
 
-
-    public TileEntityMagicBowl(NonNullList<ItemStack> bowlItems)
+    public TileEntityMagicBowl(ItemStack executor, ItemStack power, ItemStack definer)
     {
-        this.bowlItems = bowlItems;
+        this.itemStackHandler = new ItemStackHandler(NonNullList.from(ItemStack.EMPTY, executor, power, definer));
+        System.out.println(itemStackHandler.getSlots());
+    }
+
+    @Nullable
+    @Override
+    public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
+    {
+        if (capability.equals(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY))
+        {
+            return (T) this.itemStackHandler;
+        }
+
+        return super.getCapability(capability, facing);
     }
 
     @Override
-    public int getSizeInventory()
+    public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing)
     {
-        return 3;
+        if (capability.equals(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY))
+        {
+            return true;
+        }
+
+        return super.hasCapability(capability, facing);
     }
 
     @Override
-    public boolean isEmpty()
+    public boolean hasFastRenderer()
     {
-        return false;
+        return true;
     }
 
     @Override
-    public ItemStack getStackInSlot(int index)
+    public void readFromNBT(NBTTagCompound compound)
     {
-        return null;
+        super.readFromNBT(compound);
+
+        this.itemStackHandler.deserializeNBT(compound.getCompoundTag("ItemStackHandler"));
     }
 
     @Override
-    public ItemStack decrStackSize(int index, int count)
+    public NBTTagCompound writeToNBT(NBTTagCompound compound)
     {
-        return null;
+        super.writeToNBT(compound);
+
+        compound.setTag("ItemStackHandler", this.itemStackHandler.serializeNBT());
+
+        return compound;
     }
 
     @Override
-    public ItemStack removeStackFromSlot(int index)
+    public NBTTagCompound getUpdateTag()
     {
-        return null;
+        return writeToNBT(new NBTTagCompound());
     }
 
     @Override
-    public void setInventorySlotContents(int index, ItemStack stack)
+    public void handleUpdateTag(NBTTagCompound compound)
     {
-
+        this.readFromNBT(compound);
     }
 
-    @Override
-    public int getInventoryStackLimit()
-    {
-        return 0;
-    }
-
-    @Override
-    public boolean isUsableByPlayer(EntityPlayer player)
-    {
-        return false;
-    }
-
-    @Override
-    public void openInventory(EntityPlayer player)
-    {
-
-    }
-
-    @Override
-    public void closeInventory(EntityPlayer player)
-    {
-
-    }
-
-    @Override
-    public boolean isItemValidForSlot(int index, ItemStack stack)
-    {
-        return false;
-    }
-
-    @Override
-    public int getField(int id)
-    {
-        return 0;
-    }
-
-    @Override
-    public void setField(int id, int value)
-    {
-
-    }
-
-    @Override
-    public int getFieldCount()
-    {
-        return 0;
-    }
-
-    @Override
-    public void clear()
-    {
-
-    }
-
-    @Override
-    public String getName()
-    {
-        return null;
-    }
-
-    @Override
-    public boolean hasCustomName()
-    {
-        return false;
-    }
 }

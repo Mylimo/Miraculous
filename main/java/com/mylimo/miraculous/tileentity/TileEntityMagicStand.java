@@ -19,31 +19,12 @@ public class TileEntityMagicStand extends TileEntity implements ICapabilityProvi
     public TileEntityMagicStand()
     {
         this.itemStackHandler = new ItemStackHandler(1);
-        this.itemStackHandler.setStackInSlot(0, ItemStack.EMPTY);
     }
 
     public TileEntityMagicStand(ItemStack displayItem)
     {
         this.itemStackHandler = new ItemStackHandler(1);
         this.itemStackHandler.setStackInSlot(0, displayItem);
-    }
-
-    @Override
-    public void readFromNBT(NBTTagCompound compound)
-    {
-        super.readFromNBT(compound);
-
-        this.itemStackHandler.deserializeNBT(compound.getCompoundTag("ItemStackHandler"));
-    }
-
-    @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound compound)
-    {
-        super.writeToNBT(compound);
-
-        compound.setTag("ItemStackHandler", this.itemStackHandler.serializeNBT());
-
-        return compound;
     }
 
     @Nullable
@@ -74,6 +55,25 @@ public class TileEntityMagicStand extends TileEntity implements ICapabilityProvi
     {
         return true;
     }
+
+    @Override
+    public void readFromNBT(NBTTagCompound compound)
+    {
+        super.readFromNBT(compound);
+
+        this.itemStackHandler.deserializeNBT(compound.getCompoundTag("ItemStackHandler"));
+    }
+
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound compound)
+    {
+        super.writeToNBT(compound);
+
+        compound.setTag("ItemStackHandler", this.itemStackHandler.serializeNBT());
+
+        return compound;
+    }
+
 
     @Override
     public NBTTagCompound getUpdateTag()

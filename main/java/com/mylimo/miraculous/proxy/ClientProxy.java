@@ -3,10 +3,12 @@ package com.mylimo.miraculous.proxy;
 
 import com.mylimo.miraculous.client.model.ModelBlock;
 import com.mylimo.miraculous.client.model.ModelItem;
+import com.mylimo.miraculous.client.render.RenderMagicBowl;
 import com.mylimo.miraculous.client.render.RenderMagicStand;
 import com.mylimo.miraculous.client.render.RenderShot;
 import com.mylimo.miraculous.entity.EntityBullet;
 import com.mylimo.miraculous.entity.EntityShot;
+import com.mylimo.miraculous.tileentity.TileEntityMagicBowl;
 import com.mylimo.miraculous.tileentity.TileEntityMagicStand;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -29,5 +31,6 @@ public class ClientProxy extends CommonProxy
         RenderingRegistry.registerEntityRenderingHandler(EntityBullet.class, new RenderShot<Entity>(Minecraft.getMinecraft().getRenderManager(), Minecraft.getMinecraft().getRenderItem()));
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMagicStand.class, new RenderMagicStand());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMagicBowl.class, new RenderMagicBowl());
     }
 }

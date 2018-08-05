@@ -18,6 +18,5 @@ public class ModTileEntities
     private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String tileEntityName)
     {
         GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation("miraculous", tileEntityName));
-        GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation("miraculous", tileEntityName));
     }
 }
