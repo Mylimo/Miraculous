@@ -30,7 +30,6 @@ public class RecipeBowlMagic
 
     public boolean isExecutor(@Nonnull ItemStack executor)
     {
-
         return this.executor.getItem().equals(executor.getItem());
     }
 
@@ -51,7 +50,7 @@ public class RecipeBowlMagic
 
     public ItemStack getOutput()
     {
-        return output;
+        return output.copy();
     }
 }
 

@@ -43,21 +43,25 @@ public class BlockMagicStand extends Block
         return AABB;
     }
 
+    @Override
     public boolean isOpaqueCube(IBlockState state)
     {
         return false;
     }
 
+    @Override
     public boolean isFullCube(IBlockState state)
     {
         return false;
     }
 
+    @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
         return this.canBePlacedOn(worldIn, pos.down());
     }
 
+    @Override
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
     {
         if (!this.canBePlacedOn(worldIn, pos.down()))

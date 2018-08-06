@@ -55,6 +55,7 @@ public class BlockOliveLog extends net.minecraft.block.BlockRotatedPillar
         return this.getDefaultState().withProperty(LOG_AXIS, EnumAxis.values()[meta]);
     }
 
+    @Override
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
     {
         int i = 4;
@@ -74,19 +75,13 @@ public class BlockOliveLog extends net.minecraft.block.BlockRotatedPillar
         }
     }
 
-    /**
-     * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the
-     * IBlockstate
-     */
+    @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getStateFromMeta(meta).withProperty(LOG_AXIS, BlockOliveLog.EnumAxis.fromFacingAxis(facing.getAxis()));
     }
 
-    /**
-     * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed
-     * blockstate.
-     */
+    @Override
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {
         switch (rot)

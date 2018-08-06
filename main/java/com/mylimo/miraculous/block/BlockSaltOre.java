@@ -29,16 +29,19 @@ public class BlockSaltOre extends Block
         return ModItems.SALT;
     }
 
+    @Override
     public int quantityDroppedWithBonus(int fortune, Random random)
     {
         return this.quantityDropped(random) + random.nextInt(fortune + 1);
     }
 
+    @Override
     public int quantityDropped(Random random)
     {
         return 4 + random.nextInt(2);
     }
 
+    @Override
     public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
     {
         super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);

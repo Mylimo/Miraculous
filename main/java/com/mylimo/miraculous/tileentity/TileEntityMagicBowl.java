@@ -50,12 +50,6 @@ public class TileEntityMagicBowl extends TileEntity implements ICapabilityProvid
     }
 
     @Override
-    public boolean hasFastRenderer()
-    {
-        return true;
-    }
-
-    @Override
     public void readFromNBT(NBTTagCompound compound)
     {
         super.readFromNBT(compound);

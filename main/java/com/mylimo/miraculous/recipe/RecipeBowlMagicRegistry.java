@@ -30,6 +30,9 @@ public class RecipeBowlMagicRegistry
             {
                 output = recipeBowlMagic.getOutput();
             }
+
+            System.out.println(recipeBowlMagic.getOutput().getDisplayName());
+
         }
 
         return output;

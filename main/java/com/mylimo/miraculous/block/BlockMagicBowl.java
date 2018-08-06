@@ -50,23 +50,25 @@ public class BlockMagicBowl extends Block
         return AABB;
     }
 
+    @Override
     public boolean isOpaqueCube(IBlockState state)
     {
         return false;
     }
 
-
-
+    @Override
     public boolean isFullCube(IBlockState state)
     {
         return false;
     }
 
+    @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
         return this.canBePlacedOn(worldIn, pos.down());
     }
 
+    @Override
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
     {
         if (!this.canBePlacedOn(worldIn, pos.down()))
@@ -87,7 +89,6 @@ public class BlockMagicBowl extends Block
         return false;
     }
 
-
     @Override
     public boolean hasTileEntity(IBlockState state)
     {
@@ -100,7 +101,8 @@ public class BlockMagicBowl extends Block
         return new TileEntityMagicBowl();
     }
 
-        public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing enumFacing, float hitX, float hitY, float hitZ)
+    @Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing enumFacing, float hitX, float hitY, float hitZ)
     {
         TileEntityMagicBowl tileMagicBowl = TileEntityHelper.getSafeCastTile(world, pos, TileEntityMagicBowl.class);
         if (tileMagicBowl != null)
@@ -141,10 +143,18 @@ public class BlockMagicBowl extends Block
                     case 1: isAngelicAltar = false; break;
                 }
 
+                System.out.println("AngelicAltar: " + isAngelicAltar);
+
                 TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(world, magicStandPos, TileEntityMagicStand.class);
                 IItemHandler itemHandlerStand = tileMagicStand.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, enumFacing);
 
+                System.out.println("Executor: " + itemHandler.getStackInSlot(0).getDisplayName());
+                System.out.println("Power: " + itemHandler.getStackInSlot(1).getDisplayName());
+                System.out.println("Definer: " + itemHandler.getStackInSlot(2).getDisplayName());
+                System.out.println("Input: " + itemHandlerStand.getStackInSlot(0).getDisplayName());
+
                 ItemStack output = RecipeBowlMagicRegistry.getOutput(isAngelicAltar, itemHandler.getStackInSlot(0), itemHandler.getStackInSlot(1), itemHandler.getStackInSlot(2),itemHandlerStand.getStackInSlot(0));
+                System.out.println("Output: " + output.getDisplayName());
 
                 if (!output.isEmpty())
                 {
@@ -153,8 +163,10 @@ public class BlockMagicBowl extends Block
                     itemHandler.extractItem(2,1,false);
                     itemHandlerStand.extractItem(0,1,false);
                     itemHandlerStand.insertItem(0,output,false);
-                    heldItem.damageItem(1, player);
+                    world.markChunkDirty(pos, tileMagicBowl);
                     world.markChunkDirty(magicStandPos, tileMagicStand);
+
+                    player.getHeldItem(hand).damageItem(1, player);
 
                     world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, pos.getX() + 0.5D, pos.getY() + 0.2D, pos.getZ() + 0.5D,0.0D, 0.01D, 0.0D);
                     world.spawnParticle(EnumParticleTypes.CRIT_MAGIC, magicStandPos.getX() + 0.5D,magicStandPos.getY() + 0.5D, magicStandPos.getZ() + 0.5D, 0.0D, 0.01D, 0.0D);

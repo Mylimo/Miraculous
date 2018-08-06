@@ -51,12 +51,6 @@ public class TileEntityMagicStand extends TileEntity implements ICapabilityProvi
     }
 
     @Override
-    public boolean hasFastRenderer()
-    {
-        return true;
-    }
-
-    @Override
     public void readFromNBT(NBTTagCompound compound)
     {
         super.readFromNBT(compound);
