@@ -6,16 +6,16 @@ import javax.annotation.Nonnull;
 
 public class RecipeBowlMagic
 {
-    private boolean angelicRecipe;
+    private boolean endericRecipe;
     private ItemStack executor;
     private ItemStack power;
     private ItemStack definer;
     private ItemStack input;
     private ItemStack output;
 
-    public RecipeBowlMagic(@Nonnull boolean angelicRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input, @Nonnull ItemStack output)
+    public RecipeBowlMagic(@Nonnull boolean endericRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input, @Nonnull ItemStack output)
     {
-        this.angelicRecipe = angelicRecipe;
+        this.endericRecipe = endericRecipe;
         this.executor = executor;
         this.power = power;
         this.definer = definer;
@@ -23,9 +23,9 @@ public class RecipeBowlMagic
         this.output = output;
     }
 
-    public boolean isAngelicRecipe(@Nonnull boolean angelicRecipe)
+    public boolean isEndericRecipe(@Nonnull boolean endericRecipe)
     {
-        return this.angelicRecipe == angelicRecipe;
+        return this.endericRecipe == endericRecipe;
     }
 
     public boolean isExecutor(@Nonnull ItemStack executor)
@@ -46,6 +46,31 @@ public class RecipeBowlMagic
     public boolean isInput(@Nonnull ItemStack input)
     {
         return this.input.getItem().equals(input.getItem());
+    }
+
+    public boolean isEndericRecipe()
+    {
+        return this.endericRecipe;
+    }
+
+    public ItemStack getExecutor()
+    {
+        return this.executor;
+    }
+
+    public ItemStack getPower()
+    {
+        return this.power;
+    }
+
+    public ItemStack getDefiner()
+    {
+        return this.definer;
+    }
+
+    public ItemStack getInput()
+    {
+        return this.input;
     }
 
     public ItemStack getOutput()

@@ -10,12 +10,12 @@ public class RecipeBowlMagicRegistry
 {
     private static List<RecipeBowlMagic> recipesBowlMagic = new ArrayList<>();
 
-    public static boolean addRecipe(@Nonnull boolean angelicRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input, @Nonnull ItemStack output)
+    public static boolean addRecipe(@Nonnull boolean endericRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input, @Nonnull ItemStack output)
     {
-        return recipesBowlMagic.add(new RecipeBowlMagic(angelicRecipe, executor, power,definer, input,output));
+        return recipesBowlMagic.add(new RecipeBowlMagic(endericRecipe, executor, power,definer, input,output));
     }
 
-    public static ItemStack getOutput(@Nonnull boolean angelicRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input)
+    public static ItemStack getOutput(@Nonnull boolean endericRecipe, @Nonnull ItemStack executor, @Nonnull ItemStack power, @Nonnull ItemStack definer, @Nonnull ItemStack input)
     {
         ItemStack output = ItemStack.EMPTY;
 
@@ -26,15 +26,17 @@ public class RecipeBowlMagicRegistry
 
         for (RecipeBowlMagic recipeBowlMagic : recipesBowlMagic)
         {
-            if (recipeBowlMagic.isAngelicRecipe(angelicRecipe) && recipeBowlMagic.isExecutor(executor) && recipeBowlMagic.isPower(power) && recipeBowlMagic.isDefiner(definer) && recipeBowlMagic.isInput(input))
+            if (recipeBowlMagic.isEndericRecipe(endericRecipe) && recipeBowlMagic.isExecutor(executor) && recipeBowlMagic.isPower(power) && recipeBowlMagic.isDefiner(definer) && recipeBowlMagic.isInput(input))
             {
                 output = recipeBowlMagic.getOutput();
             }
-
-            System.out.println(recipeBowlMagic.getOutput().getDisplayName());
-
         }
 
         return output;
+    }
+
+    public static List<RecipeBowlMagic> getRecipesBowlMagic()
+    {
+        return recipesBowlMagic;
     }
 }

@@ -32,14 +32,12 @@ public class Reference
     public static final String SALTY_CRACKER = "salty_cracker";
     public static final String OLIVE_CRACKER = "olive_cracker";
     public static final String ROSARY = "rosary";
-    public static final String ROSARY_FILLED = "rosary_filled";
     public static final String COLT = "colt";
     public static final String IRON_BULLET = "iron_bullet";
     public static final String GLASS_SHARDS = "glass_shards";
     public static final String GROUND_COAL = "ground_coal";
-    public static final String ANGELIC_CRYSTAL = "angelic_crystal";
-    public static final String DEMONIC_STEEL = "demonic_steel";
-
+    public static final String END_GEM = "end_gem";
+    public static final String NETHER_INGOT = "nether_ingot";
 
     //BlockNames
     public static final String SALT_ORE = "salt_ore";
@@ -58,6 +56,17 @@ public class Reference
     public static final String HOLY_OIL = "holy_oil";
 
     //TileEntityNames
-    public static final String MAGIC_BOWL_TE = "magic_bowl_te";
-    public static final String MAGIC_STAND_TE = "magic_stand_te";
+    public static final String TE_MAGIC_BOWL = "magic_bowl_te";
+    public static final String TE_MAGIC_STAND = "magic_stand_te";
+
+    //JEI
+    public static final String BOWL_MAGIC_UID = "miraculous.bowl_magic";
+
+    //Translate Keys
+    public static final String TK_JEI_BOWLMAGIC_= "miraculous.jei.bowl_magic";
+    public static final String TK_JEI_ENDERIC_ALTAR = "miraculous.jei.req_enderic_altar";
+    public static final String TK_JEI_NETHEROUS_ALTAR = "miraculous.jei.req_netherous_altar";
+
+    //Texture Paths
+    public static final String TP_JEI_BOWLMAGIC_= "textures/gui/bowl_magic_jei.png";
 }

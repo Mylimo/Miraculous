@@ -1,6 +1,6 @@
 {
     "parent":"item/generated",
     "textures": {
-        "layer0":"miraculous:items/angelic_crystal"
+        "layer0":"miraculous:items/nether_ingot"
     }
 }

@@ -2,10 +2,6 @@
 itemGroup.miraculous=Miraculous
 
 #Entities
-entity.wither_demon.name=Wither Demon
-entity.mangle_demon.name=Mangle Demon
-entity.ignite_demon.name=Ignite Demon
-entity.glare_demon.name=Glare Demon
 entity.shot.name=Shot Projectile
 
 #Items
@@ -30,8 +26,8 @@ item.colt.name=Colt
 item.iron_bullet.name=Iron Bullet
 item.glass_shards.name=Glass Shards
 item.ground_coal.name=Ground Coal
-item.angelic_crystal.name=Angelic Crystal
-item.demonic_steel.name=Demonic Steel
+item.end_gem.name=End Gem
+item.nether_ingot.name=Nether Ingot
 
 
 #Blocks
@@ -63,3 +59,8 @@ advancements.basics.rosary.title=Are we in a church or what?
 advancements.basics.rosary.description=Craft a Rosary
 advancements.basics.colt.title=Yet another gun
 advancements.basics.colt.description=Craft a Colt
+
+#JEI
+miraculous.jei.bowl_magic=Bowl Magic
+miraculous.jei.req_enderic_altar=Requires Enderic Altar
+miraculous.jei.req_netherous_altar=Requires Netherous Altar

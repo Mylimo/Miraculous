@@ -11,12 +11,12 @@ public class ModTileEntities
 {
     public static void  init()
     {
-        registerTileEntity(TileEntityMagicBowl.class, Reference.MAGIC_BOWL_TE);
-        registerTileEntity(TileEntityMagicStand.class, Reference.MAGIC_STAND_TE);
+        registerTileEntity(TileEntityMagicBowl.class, Reference.TE_MAGIC_BOWL);
+        registerTileEntity(TileEntityMagicStand.class, Reference.TE_MAGIC_STAND);
     }
 
     private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String tileEntityName)
     {
-        GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation("miraculous", tileEntityName));
+        GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation(Reference.MOD_ID, tileEntityName));
     }
 }

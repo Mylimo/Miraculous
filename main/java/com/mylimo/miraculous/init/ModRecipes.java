@@ -22,9 +22,9 @@ public class ModRecipes
         final ItemStack glassShards = new ItemStack(ModItems.GLASS_SHARDS);
         final ItemStack groundCoal = new ItemStack(ModItems.GROUND_COAL);
         final ItemStack diamond = new ItemStack(Items.DIAMOND);
-        final ItemStack angelicCrystal = new ItemStack(ModItems.ANGELIC_CRYSTAL);
+        final ItemStack end_gem = new ItemStack(ModItems.END_GEM);
         final ItemStack ironIngot = new ItemStack(Items.IRON_INGOT);
-        final ItemStack demonicSteel = new ItemStack(ModItems.DEMONIC_STEEL);
+        final ItemStack nether_ingot = new ItemStack(ModItems.NETHER_INGOT);
 
         //Furnace Recipes
         GameRegistry.addSmelting(ModBlocks.OLIVE_LEAVES, ash, 0.1F);
@@ -36,7 +36,7 @@ public class ModRecipes
         BrewingRecipeRegistry.addRecipe(flask, oliveSapling, holyWater);
 
         //BowlMagic
-        RecipeBowlMagicRegistry.addRecipe(true, glassShards, groundCoal, salt,diamond,angelicCrystal);
-        RecipeBowlMagicRegistry.addRecipe(false, glassShards, groundCoal,ash, ironIngot, demonicSteel);
+        RecipeBowlMagicRegistry.addRecipe(true, glassShards, groundCoal, salt,diamond,end_gem);
+        RecipeBowlMagicRegistry.addRecipe(false, glassShards, groundCoal,ash, ironIngot, nether_ingot);
     }
 }

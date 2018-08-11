@@ -136,25 +136,17 @@ public class BlockMagicBowl extends Block
                     case 3: magicStandPos = pos.west(); break;
                 }
 
-                boolean isAngelicAltar = true;
+                boolean isEndericAltar = true;
                 switch (getAltarType(world, pos))
                 {
-                    case 0: isAngelicAltar = true; break;
-                    case 1: isAngelicAltar = false; break;
+                    case 0: isEndericAltar = true; break;
+                    case 1: isEndericAltar = false; break;
                 }
-
-                System.out.println("AngelicAltar: " + isAngelicAltar);
 
                 TileEntityMagicStand tileMagicStand = TileEntityHelper.getSafeCastTile(world, magicStandPos, TileEntityMagicStand.class);
                 IItemHandler itemHandlerStand = tileMagicStand.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, enumFacing);
 
-                System.out.println("Executor: " + itemHandler.getStackInSlot(0).getDisplayName());
-                System.out.println("Power: " + itemHandler.getStackInSlot(1).getDisplayName());
-                System.out.println("Definer: " + itemHandler.getStackInSlot(2).getDisplayName());
-                System.out.println("Input: " + itemHandlerStand.getStackInSlot(0).getDisplayName());
-
-                ItemStack output = RecipeBowlMagicRegistry.getOutput(isAngelicAltar, itemHandler.getStackInSlot(0), itemHandler.getStackInSlot(1), itemHandler.getStackInSlot(2),itemHandlerStand.getStackInSlot(0));
-                System.out.println("Output: " + output.getDisplayName());
+                ItemStack output = RecipeBowlMagicRegistry.getOutput(isEndericAltar, itemHandler.getStackInSlot(0), itemHandler.getStackInSlot(1), itemHandler.getStackInSlot(2),itemHandlerStand.getStackInSlot(0));
 
                 if (!output.isEmpty())
                 {

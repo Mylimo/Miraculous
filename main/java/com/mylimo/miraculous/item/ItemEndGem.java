@@ -3,11 +3,11 @@ package com.mylimo.miraculous.item;
 import com.mylimo.miraculous.Reference;
 import net.minecraft.item.Item;
 
-public class ItemDemonicSteel extends Item
+public class ItemEndGem extends Item
 {
-    public ItemDemonicSteel()
+    public ItemEndGem()
     {
-        ItemMiraculous.registerItem(Reference.DEMONIC_STEEL, this);
+        ItemMiraculous.registerItem(Reference.END_GEM, this);
 
         this.setMaxStackSize(64);
     }

@@ -30,8 +30,8 @@ public class ModelItem
         registerItem(ModItems.IRON_BULLET);
         registerItem(ModItems.GLASS_SHARDS);
         registerItem(ModItems.GROUND_COAL);
-        registerItem(ModItems.ANGELIC_CRYSTAL);
-        registerItem(ModItems.DEMONIC_STEEL);
+        registerItem(ModItems.END_GEM);
+        registerItem(ModItems.NETHER_INGOT);
     }
 
     private static void registerItem(Item item)

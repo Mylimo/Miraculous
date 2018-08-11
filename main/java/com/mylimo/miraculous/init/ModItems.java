@@ -26,8 +26,8 @@ public class ModItems
     public static ItemIronBullet IRON_BULLET;
     public static ItemGlassShards GLASS_SHARDS;
     public static ItemGroundCoal GROUND_COAL;
-    public static ItemAngelicCrystal ANGELIC_CRYSTAL;
-    public static ItemDemonicSteel DEMONIC_STEEL;
+    public static ItemEndGem END_GEM;
+    public static ItemNetherIngot NETHER_INGOT;
 
     public static void init(FMLPreInitializationEvent event)
     {
@@ -52,8 +52,8 @@ public class ModItems
         IRON_BULLET = new ItemIronBullet();
         GLASS_SHARDS = new ItemGlassShards();
         GROUND_COAL = new ItemGroundCoal();
-        ANGELIC_CRYSTAL = new ItemAngelicCrystal();
-        DEMONIC_STEEL = new ItemDemonicSteel();
+        END_GEM = new ItemEndGem();
+        NETHER_INGOT = new ItemNetherIngot();
     }
 
 }
