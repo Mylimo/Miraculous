@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "miraculous:wither_knife"
+    ]
+  },
+  "criteria": {
+    "has_nether_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "miraculous:nether_ingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "miraculous:wither_knife"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

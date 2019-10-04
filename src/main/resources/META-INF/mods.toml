@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+issueTrackerURL="https://github.com/Mylimo/Miraculous/issues"
+
+[[mods]]
+
+modId="miraculous"
+namespace="miraculous"
+version="${version}"
+displayName="Miraculous"
+credits="DreadKyller"
+authors="Mylimo"
+description='''
+A Minecraft Mod that adds all kinds of supernatural sorceries to the world!
+'''
+
+[[dependencies.miraculous]]
+    modId="forge"
+    mandatory=true
+    versionRange="[${forge_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.miraculous]]
+    modId="forge"
+    mandatory=false
+    versionRange="[${jei_version},)"
+    ordering="NONE"
+    side="BOTH"

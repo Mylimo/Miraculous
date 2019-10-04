@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "G",
+    "G",
+    "S"
+  ],
+  "key": {
+    "G": {
+      "item": "miraculous:end_gem",
+      "data": 0
+    },
+    "S": {
+      "item": "miraculous:olive_wood_stick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "miraculous:ender_blade"
+  }
+}
