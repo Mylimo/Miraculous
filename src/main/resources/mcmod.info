@@ -3,8 +3,8 @@
   "modid": "miraculous",
   "name": "Miraculous",
   "description": "A Minecraft Mod that adds all kinds of supernatural sorceries to the world!",
-  "version": "0.1",
-  "mcversion": "1.14.4",
+  "version": "${version}",
+  "mcversion": "${minecraft_version}",
   "url": "",
   "updateUrl": "",
   "authorList": [
